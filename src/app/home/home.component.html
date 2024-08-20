@@ -1,0 +1,68 @@
+<div class="container">
+  <!-- Filters Section Start-->
+  <div class="filters">
+    <h3>Filter Results</h3>
+    <label for="search">Name (contains)</label>
+    <input id="search" [(ngModel)]="searchTerm" (ngModelChange)="filterGames()" placeholder="Text string">
+    <div class="content-grid">
+      <div class="minScore">
+        <label for="minScore">Minimum Score</label>
+        <input id="minScore" class="minScore" type="number" [(ngModel)]="minScore" (ngModelChange)="filterGames()"
+          placeholder="1 - 100">
+      </div>
+      <div class="arrow__orderBy">
+        <label for="orderBy">Order By </label>
+        <div class="arrow"><mat-icon>arrow_upward</mat-icon>
+          <select id="orderBy" class="orderBy" [(ngModel)]="orderBy" (ngModelChange)="filterGames()">
+            <option value="firstReleaseDate" >Release Date</option>
+            <option value="rating" >Score</option>
+            <option value="name" >Name</option>
+          </select>
+        </div>
+      </div>
+      <button class="clear-button" (click)="clearFilter()" aria-label="Clear filters">Clear</button>
+    </div>
+  </div>
+  <!-- Filters Section End-->
+
+  <!-- Games Grid Start-->
+  <div class="games-grid">
+    <div *ngIf="loading" class="loading">Loading...</div>
+
+    <div *ngFor="let game of paginatedGames" class="game-card">
+      <div class="black-box">
+      </div>
+
+      <div class="game-card-content">
+        <h2>{{ game.attributes.name }}</h2>
+        <h4>Release Date: {{ game.attributes.firstReleaseDate | date:'dd/MM/yyyy' }}</h4>
+        <p>{{ game.attributes.summary }}</p>
+      </div>
+      <div class="game-score">{{ game.attributes.rating }}</div>
+    </div>
+    
+
+    <!-- Pagination Start-->
+    <div class="pagination-container mt-4" *ngIf="totalPages > 1">
+      <div class="pagination">
+        <button class="pagination-btn prev-btn" (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1"
+          aria-label="Previous page">
+          &laquo;
+        </button>
+
+        <button *ngFor="let page of [].constructor(totalPages); let i = index" class="pagination-btn"
+          [class.active]="i + 1 === currentPage" (click)="changePage(i + 1)"
+          [attr.aria-label]="'Go to page ' + (i + 1)">
+          {{ i + 1 }}
+        </button>
+
+        <button class="pagination-btn next-btn" (click)="changePage(currentPage + 1)"
+          [disabled]="currentPage === totalPages" aria-label="Next page">
+          &raquo;
+        </button>
+      </div>
+    </div>
+    <!-- Pagination End-->
+  </div>
+  <!-- Games Grid End-->
+</div>
