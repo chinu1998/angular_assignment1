@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Mulish:wght@500&display=swap');
 
 body {
@@ -70,3 +71,77 @@ textarea::placeholder {
 :-moz-placeholder {
   color: #c1d1e8;
 }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Mulish:wght@500&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom, #081221, #03080f);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, button {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+label, p {
+  font-size: 12px;
+}
+
+p, h4 {
+  color: #c1d1e8;
+}
+
+button {
+  background-color: #5692e8;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+}
+
+input, select {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: #ffffff;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+  border: none;
+}
+
+::placeholder {
+  color: #c1d1e8;
+  font-size: 12px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #c1d1e8;
+  font-weight: 500;
+}
+
+::-webkit-input-placeholder {
+  color: #c1d1e8;
+}
+
+::-moz-placeholder {
+  color: #c1d1e8;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #c1d1e8;
+}
+
+:-moz-placeholder {
+  color: #c1d1e8;
+}
+>>>>>>> dfc6a3ec6b0f9e432f017a1a6b718110807ecc6d

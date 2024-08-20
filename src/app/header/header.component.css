@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header {
     padding: 150px;
     padding-bottom: 150px;
@@ -89,4 +90,97 @@ a.active .text-shadow2 {
     }
   }
  
+=======
+header {
+    padding: 150px;
+    padding-bottom: 150px;
+    padding-top: 120px;
+  }
+  
+  nav {
+
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+  }
+  
+  a {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    z-index: 2;
+  }
+  
+  a:hover, a.active {
+    color: #ffffff;
+  }
+
+  .text-shadow {
+    position: absolute;
+    color: rgb(255 255 255 / 10%) !important;
+    z-index: 1;
+    transform: translate(-264px, -42px);
+    font-size: 4rem;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    display: none;
+  }
+
+  .text-shadow2 {
+    display: none;
+    position: absolute;
+    color: rgb(255 255 255 / 10%) !important;
+    z-index: 1;
+    transform: translate(-192px, -39px);
+    font-size: 4rem;
+    font-family: 'Montserrat';
+    font-weight: 500;
+
+  }
+  a.active .text-shadow,
+a.active .text-shadow2 {
+  display: inline; /* Or use block/inline-block based on layout needs */
+}
+  @media (max-width: 767px) {
+    header {
+    
+      padding: 40px !important;
+      padding-bottom: 80px !important ;
+    }
+  .text-shadow {
+    
+    transform: translate(-252px, -29px);
+    font-size: 3rem;
+  }
+  .text-shadow2 {
+    
+    transform: translate(-179px, -21px);
+        font-size: 3rem;
+    
+  }
+  
+}
+  @media (max-width: 1024px) {
+    nav {
+      flex-direction: column;
+      gap: 20px;
+    }
+    header{
+      padding: 40px;
+      padding-bottom: 80px;
+    }
+    .text-shadow{
+      font-size: 3rem;
+    transform: translate(-250px, -25px);
+    }
+    .text-shadow2{
+    font-size: 3rem;
+        transform: translate(-180px, -20px);
+    }
+  }
+ 
+>>>>>>> dfc6a3ec6b0f9e432f017a1a6b718110807ecc6d
   

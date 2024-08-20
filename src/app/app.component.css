@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :host {
     display: flex;
     flex-direction: column;
@@ -18,4 +19,26 @@
       margin-top: -40px;
       overflow-y: auto;
     }
+=======
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1;
+    overflow-y: hidden;
+    padding: 20px;
+    padding-top: 0; /* Adjust this value based on your header height */
+    margin-top: -80px;
+  }
+
+  
+  @media (max-width: 1024px) {
+    .main-content {
+      margin-top: -40px;
+      overflow-y: auto;
+    }
+>>>>>>> dfc6a3ec6b0f9e432f017a1a6b718110807ecc6d
   }
